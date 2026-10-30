@@ -1,0 +1,54 @@
+{
+  "timezone": "Europe/Moscow",
+  "poll_seconds": 900,
+  "max_model_calls_per_day": 20,
+  "max_articles_per_scan": 10,
+  "sources": [
+    {
+      "name": "Blizzard",
+      "type": "listing",
+      "url": "https://news.blizzard.com/en-us/feed/world-of-warcraft",
+      "allowed_hosts": ["news.blizzard.com", "worldofwarcraft.blizzard.com"],
+      "article_path_pattern": "/(?:[a-z]{2}-[a-z]{2}/)?article/\\d+/",
+      "official": true,
+      "dedicated": false,
+      "track_updates": 2,
+      "max_items": 30,
+      "enabled": true
+    },
+    {
+      "name": "Wowhead",
+      "type": "rss",
+      "url": "https://www.wowhead.com/news/rss/all",
+      "allowed_hosts": ["www.wowhead.com", "wowhead.com"],
+      "official": false,
+      "dedicated": false,
+      "track_updates": 1,
+      "max_items": 30,
+      "enabled": true
+    },
+    {
+      "name": "Icy Veins",
+      "type": "listing",
+      "url": "https://www.icy-veins.com/wow-forever/",
+      "allowed_hosts": ["www.icy-veins.com", "icy-veins.com"],
+      "article_path_pattern": "^/wow-forever/news/[^/]+/?$",
+      "official": false,
+      "dedicated": true,
+      "track_updates": 1,
+      "max_items": 30,
+      "enabled": true
+    },
+    {
+      "name": "Noob Club",
+      "type": "noob_board",
+      "url": "https://www.noob-club.ru/index.php?board=268.0",
+      "allowed_hosts": ["www.noob-club.ru"],
+      "official": false,
+      "dedicated": false,
+      "track_updates": 0,
+      "max_items": 20,
+      "enabled": true
+    }
+  ]
+}
